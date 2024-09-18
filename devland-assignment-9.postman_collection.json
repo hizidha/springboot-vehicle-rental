@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "123d77b5-481c-4785-8ed9-0b5ee4cc53f0",
+		"name": "devland-assignment-9",
+		"description": "Team 1\n\n1. Adisaputra Zidha\n    \n2. Aldonni Hutapea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26553466"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "s",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/customers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ci Mehong\",\r\n    \"email\": \"encihong@au.ah\",\r\n    \"phone\": \"081615203921\",\r\n    \"address\": \"Pantai Indah Kapok\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cak Badrun\",\r\n    \"email\": \"encihong@au.ah\",\r\n    \"phone\": \"081615203921\",\r\n    \"address\": \"Sebelahnya Bratang\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/customers/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/customers/4"
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD Customer Data"
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "registration_number",
+									"value": "l",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/vehicles/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vehicles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\": \"HyuNDai\",\r\n    \"model\": \"IONIC 5\",\r\n    \"registrationNumber\": \"l 8374 iT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/vehicles"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\": \"HyuNDai\",\r\n    \"model\": \"IONIC 5 (2024)\",\r\n    \"registrationNumber\": \"l 8374 SS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/vehicles/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicles",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/vehicles/4"
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD Vehicle Data"
+		},
+		{
+			"name": "Rental Record",
+			"item": [
+				{
+					"name": "Get All Rental Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rental-records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rental-records"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Rental Record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/rental-records/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Rent a Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rentalDate\": \"2024-09-09\",\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    },\r\n    \"customer\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/rental-records"
+					},
+					"response": []
+				},
+				{
+					"name": "Return a Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"returnDate\": \"2024-09-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/rental-records/4"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
